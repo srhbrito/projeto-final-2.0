@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrituqueFlix</title>
+    <a href="./prjeto.css"></a>
+    <link rel="shortcut icon" href="../images/BrituqueFlix.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(245, 245, 220, 0.774)
+        }
+
+        h1 {
+            font-family: cursive;
+            color: rgba(0, 8, 255, 0.617);
+        }
+
+        h2 {
+            font-family: cursive;
+            color: rgba(0, 8, 255, 0.617);
+        }
+
+        h3 {
+            color: rgba(0, 8, 255, 0.617);
+        }
+
+        #box {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        }
+
+        button {
+            margin: top 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #4caf50;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>alugue o seu filme</h1> <br>
+    <h2>valor fixo de 25 reais (você pode ficar 1 mês com o filme)</h2>
+    <h3>Taxa de atrasso de R$5 por dia com atraso!</h3>
+    <form action="nome">
+        <label for=""> Insira seu nome</label>
+        <input type="text" name="nome" id="nome">
+        <br>
+        <label for="email"> Insira seu email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="senha"> Insira sua senha</label>
+        <input type="password" name="senha" id="senha"><br>
+        <button type="reset"> resetar</button>
+        <button type="submit"> enviar</button>
+        <button onclick="alugar()" id="alugarfilme"> alugar filme</button>
+        <p id="mensagem"></p>
+
+    </form>
+
+    <script>
+        document.getElementById("alugarfilme").onmouseover = function () {
+            document.getElementById("alugarfilme").style.backgroundColor = "lightgreen";
+        }
+        document.getElementById("alugarfilme").onmouseout = function () {
+            document.getElementById("alugarfilme").style.backgroundColor = "white";
+        }
+        document.getElementById("alugarfilme").onclick = function () {
+            document.getElementById("mensagem").innerText = ("filme alugado com sucesso")
+        }
+    </script>
+    <div id="box">
+        <h2>pagamento via pix. (simulação)</h2>
+
+        <p><strong>Código pix (falso):</strong></p>
+        <textarea rows="3"
+            cols="32">00020126580014br.gov.bcb.pix0136simulacao-pix-teste520400005303986540510.005802br5925nome de teste de pagamento6009juiz de fora</textarea>
+        <button onclick="confirmar()">Já paguei (simulação)</button>
+        <p id="msg"></p>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
